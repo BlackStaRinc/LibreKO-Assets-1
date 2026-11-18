@@ -599,6 +599,12 @@ def main() -> int:
         baked.update(items)
         (OUT_DIR / "items.json").write_text(json.dumps(baked, separators=(",", ":")))
         print(f"[items] wrote items.json ({len(items)} items, {len(baked['_ext'])} ext categories)")
+        # ItemData.IconId() resolves Item_Ext col6 (icon) ahead of Item_Org col7, so extract those too.
+        for cat_map in baked["_ext"].values():
+            for rec in cat_map.values():
+                ext_icon = int(rec.get("icon", 0) or 0)
+                if ext_icon > 0:
+                    resrcs.setdefault(ext_icon, 0)
         if args.json_only:
             return 0
 
