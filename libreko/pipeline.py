@@ -133,6 +133,7 @@ STAGES: tuple[Stage, ...] = (
             Step("cursors", "bake_cursors"),
             Step("warps", "bake_warps"),
             Step("target-symbol", "bake_target_symbol"),
+            Step("rank-symbols", "bake_rank_symbols"),
         ),
     ),
     Stage(

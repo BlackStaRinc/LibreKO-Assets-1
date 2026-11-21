@@ -57,7 +57,7 @@ Stages run in order, and the order matters — later stages read what earlier on
 | `weapons` | weapon meshes and the enchant-guide chain |
 | `fx` | effect descriptors, ids and placements |
 | `skills` | skill presentation |
-| `ui` | cursors, warp data, target symbol |
+| `ui` | cursors, warp data, target symbol, rank symbols |
 | `sky` | moon disc |
 | `sound` | audio archive to ogg |
 | `imports` | Godot import sidecars: VRAM compression and mipmaps for the 3D texture folders |
